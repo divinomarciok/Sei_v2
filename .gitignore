@@ -1,0 +1,22 @@
+# Arquivos de compilação
+build/
+bin/
+out/
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Módulos Node.js
+node_modules/
+
+# Pacotes Python
+__pycache__/
+*.pyc
+
+# Arquivos de configuração local
+config.ini
+.env
