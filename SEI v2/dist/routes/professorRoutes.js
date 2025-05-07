@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.professorRouter = void 0;
+const express_1 = require("express");
+const ProfessorController_1 = require("../controllers/ProfessorController");
+const router = (0, express_1.Router)();
+exports.professorRouter = router;
+const controller = new ProfessorController_1.ProfessorController();
+router.post('/professor', (req, res) => controller.create(req, res));
+router.get('/professor', (req, res) => controller.list(req, res));
+router.get('/professor/:id', (req, res) => controller.findById(req, res));
+router.put('/professor/:id', (req, res) => controller.update(req, res));
+router.delete('/professor/:id', (req, res) => controller.delete(req, res));
+router.get('/professor/matricula/:matricula', (req, res) => controller.findByMatricula(req, res));

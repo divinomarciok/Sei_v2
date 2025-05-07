@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.salaRouter = void 0;
+const express_1 = require("express");
+const SalaController_1 = require("../controllers/SalaController");
+const router = (0, express_1.Router)();
+exports.salaRouter = router;
+const controller = new SalaController_1.SalaController();
+router.post('/salas', (req, res) => controller.create(req, res));
+router.get('/salas', (req, res) => controller.list(req, res));
+router.get('/salas/:id', (req, res) => controller.findById(req, res));
+router.put('/salas/:id', (req, res) => controller.update(req, res));
+router.delete('/salas/:id', (req, res) => controller.delete(req, res));
+router.get('/salas/capacidade/:capacidade', (req, res) => controller.findByCapacidadeMinima(req, res));

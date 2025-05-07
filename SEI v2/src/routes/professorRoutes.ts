@@ -1,0 +1,14 @@
+import { Router } from 'express';
+import { ProfessorController } from '../controllers/ProfessorController';
+
+const router = Router();
+const controller = new ProfessorController();
+
+router.post('/professor', (req, res) => controller.create(req, res));
+router.get('/professor', (req, res) => controller.list(req, res));
+router.get('/professor/:id', (req, res) => controller.findById(req, res));
+router.put('/professor/:id', (req, res) => controller.update(req, res));
+router.delete('/professor/:id', (req, res) => controller.delete(req, res));
+router.get('/professor/matricula/:matricula', (req, res) => controller.findByMatricula(req, res));
+
+export  {router as professorRouter};

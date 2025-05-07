@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.turmaRouter = void 0;
+const express_1 = require("express");
+const TurmaController_1 = require("../controllers/TurmaController");
+const router = (0, express_1.Router)();
+exports.turmaRouter = router;
+const controller = new TurmaController_1.TurmaController();
+router.post('/turmas', (req, res) => controller.create(req, res));
+router.get('/turmas', (req, res) => controller.list(req, res));
+router.get('/turmas/relations', (req, res) => controller.findAllWithRelations(req, res));
+router.get('/turmas/:id', (req, res) => controller.findById(req, res));
+router.put('/turmas/:id', (req, res) => controller.update(req, res));
+router.delete('/turmas/:id', (req, res) => controller.delete(req, res));

@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.disciplinaRouter = void 0;
+const express_1 = require("express");
+const DisciplinaController_1 = require("../controllers/DisciplinaController");
+const router = (0, express_1.Router)();
+exports.disciplinaRouter = router;
+const controller = new DisciplinaController_1.DisciplinaController();
+router.post('/disciplina', (req, res) => controller.create(req, res));
+router.get('/disciplina', (req, res) => controller.list(req, res));
+router.put('/disciplina/:id', (req, res) => controller.update(req, res));
+router.delete('/disciplina/:id', (req, res) => controller.delete(req, res));
+router.get('/disciplina/nome/:nome', (req, res) => controller.findByNome(req, res));
+router.get('/disciplina/:id', (req, res) => controller.findById(req, res));
