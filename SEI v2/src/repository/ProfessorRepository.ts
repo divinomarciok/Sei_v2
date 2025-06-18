@@ -10,11 +10,7 @@ export class ProfessorRepository extends BaseRepository<Professor> {
         super(AppDataSource.getRepository(Professor));
     }
     
-    /**
-     * Busca professor por matrícula
-     * @param matricula Matrícula do professor
-     * @returns Professor encontrado ou null
-     */
+ 
     async findByMatricula(matricula: string): Promise<Professor | null> {
         return await this.repository.findOne({
             where: {

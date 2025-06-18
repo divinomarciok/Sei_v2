@@ -14,18 +14,10 @@ const typeorm_1 = require("typeorm");
 const BaseRepository_1 = require("./base/BaseRepository");
 const Disciplina_1 = require("../models/Disciplina");
 const connection_1 = require("../database/connection");
-/**
- * Repositório para operações relacionadas a Disciplinas
- */
 class DisciplinaRepository extends BaseRepository_1.BaseRepository {
     constructor() {
         super(connection_1.AppDataSource.getRepository(Disciplina_1.Disciplina));
     }
-    /**
-     * Busca disciplinas por nome (busca parcial, case insensitive)
-     * @param nome Nome ou parte do nome da disciplina
-     * @returns Lista de disciplinas que correspondem à busca
-     */
     findByNome(nome) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this.repository.find({

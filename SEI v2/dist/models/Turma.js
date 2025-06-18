@@ -30,7 +30,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Turma.prototype, "disciplina_id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => Disciplina_1.Disciplina, disciplina => disciplina.turmas),
+    (0, typeorm_1.ManyToOne)(() => Disciplina_1.Disciplina),
     (0, typeorm_1.JoinColumn)({ name: "disciplina_id" }),
     __metadata("design:type", Disciplina_1.Disciplina)
 ], Turma.prototype, "disciplina", void 0);

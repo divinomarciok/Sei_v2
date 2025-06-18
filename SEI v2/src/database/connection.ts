@@ -3,6 +3,8 @@ import {  Disciplina } from "../models/Disciplina";
 import {  Sala } from "../models/Sala";
 import {  Professor } from "../models/Professor";
 import {  Turma } from "../models/Turma";
+import { TurmaAluno } from "../models/TurmaAluno";
+import { Aluno } from "../models/Aluno";
 
 // Crie uma conexão com o banco de dados
 export const AppDataSource = new DataSource({
@@ -14,9 +16,9 @@ export const AppDataSource = new DataSource({
     database: "sei_v2", // Altere conforme suas configurações
     synchronize: false, // Desativado para usar migrations
     logging: true,
-    entities: [Sala, Disciplina, Professor, Turma],
+    entities: [Sala, Disciplina, Professor,Aluno, Turma,TurmaAluno],
     subscribers: [],
-    migrations: [__dirname + "/../migrations/*.js"],
+    migrations: [__dirname + "/../migrations/*.ts"],
     migrationsTableName: "migrations_history"
 });
 

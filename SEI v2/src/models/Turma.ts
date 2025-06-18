@@ -14,7 +14,7 @@ export class Turma {
     @Column()
     disciplina_id!: number;
 
-    @ManyToOne(() => Disciplina, disciplina => disciplina.turmas)
+    @ManyToOne(() => Disciplina)
     @JoinColumn({ name: "disciplina_id" })
     disciplina!: Disciplina;
 

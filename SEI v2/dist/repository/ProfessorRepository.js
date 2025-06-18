@@ -20,11 +20,6 @@ class ProfessorRepository extends BaseRepository_1.BaseRepository {
     constructor() {
         super(connection_1.AppDataSource.getRepository(Professor_1.Professor));
     }
-    /**
-     * Busca professor por matrícula
-     * @param matricula Matrícula do professor
-     * @returns Professor encontrado ou null
-     */
     findByMatricula(matricula) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this.repository.findOne({

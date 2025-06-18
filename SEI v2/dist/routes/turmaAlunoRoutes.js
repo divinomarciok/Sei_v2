@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.turmaAlunoRouter = void 0;
+const express_1 = require("express");
+const TurmaAlunoController_1 = require("../controllers/TurmaAlunoController");
+const router = (0, express_1.Router)();
+exports.turmaAlunoRouter = router;
+const controller = new TurmaAlunoController_1.TurmaAlunoController();
+router.post('/turmaAluno', (req, res) => controller.create(req, res));
+router.get('/turmaAluno', (req, res) => controller.list(req, res));
+router.put('/turmaAluno/:id', (req, res) => controller.update(req, res));
+router.delete('/turmaAluno/:id', (req, res) => controller.delete(req, res));
+router.get('/turmaAluno/:id', (req, res) => controller.findById(req, res));

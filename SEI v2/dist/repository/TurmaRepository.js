@@ -13,17 +13,10 @@ exports.TurmaRepository = void 0;
 const BaseRepository_1 = require("./base/BaseRepository");
 const Turma_1 = require("../models/Turma");
 const connection_1 = require("../database/connection");
-/**
- * Repositório para operações relacionadas a Turmas
- */
 class TurmaRepository extends BaseRepository_1.BaseRepository {
     constructor() {
         super(connection_1.AppDataSource.getRepository(Turma_1.Turma));
     }
-    /**
-     * Busca turmas com relacionamentos (disciplina, professor e sala)
-     * @returns Lista de turmas com dados relacionados
-     */
     findAllWithRelations() {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this.repository.find({

@@ -15,6 +15,8 @@ const Disciplina_1 = require("../models/Disciplina");
 const Sala_1 = require("../models/Sala");
 const Professor_1 = require("../models/Professor");
 const Turma_1 = require("../models/Turma");
+const TurmaAluno_1 = require("../models/TurmaAluno");
+const Aluno_1 = require("../models/Aluno");
 // Crie uma conexão com o banco de dados
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres", // Você pode mudar para outro banco de dados se necessário
@@ -25,9 +27,9 @@ exports.AppDataSource = new typeorm_1.DataSource({
     database: "sei_v2", // Altere conforme suas configurações
     synchronize: false, // Desativado para usar migrations
     logging: true,
-    entities: [Sala_1.Sala, Disciplina_1.Disciplina, Professor_1.Professor, Turma_1.Turma],
+    entities: [Sala_1.Sala, Disciplina_1.Disciplina, Professor_1.Professor, Aluno_1.Aluno, Turma_1.Turma, TurmaAluno_1.TurmaAluno],
     subscribers: [],
-    migrations: [__dirname + "/../migrations/*.js"],
+    migrations: [__dirname + "/../migrations/*.ts"],
     migrationsTableName: "migrations_history"
 });
 // Função para inicializar a conexão com o banco de dados

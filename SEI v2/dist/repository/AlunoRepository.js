@@ -9,28 +9,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SalaRepository = void 0;
+exports.AlunoRepository = void 0;
+const typeorm_1 = require("typeorm");
 const BaseRepository_1 = require("./base/BaseRepository");
-const Sala_1 = require("../models/Sala");
+const Aluno_1 = require("../models/Aluno");
 const connection_1 = require("../database/connection");
-class SalaRepository extends BaseRepository_1.BaseRepository {
+class AlunoRepository extends BaseRepository_1.BaseRepository {
     constructor() {
-        super(connection_1.AppDataSource.getRepository(Sala_1.Sala));
+        super(connection_1.AppDataSource.getRepository(Aluno_1.Aluno));
     }
-    findByCapacidadeMinima(capacidade) {
+    findByNome(nome) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this.repository.find({
                 where: {
-                    capacidade: capacidade >= 0 ?
-                        { gte: capacidade } :
-                        undefined,
+                    nome: (0, typeorm_1.ILike)(`%${nome}%`),
                     ativo: true
                 },
                 order: {
-                    capacidade: "ASC"
+                    nome: "ASC"
                 }
             });
         });
     }
 }
-exports.SalaRepository = SalaRepository;
+exports.AlunoRepository = AlunoRepository;

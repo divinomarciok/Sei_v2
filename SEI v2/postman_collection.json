@@ -1,0 +1,368 @@
+{
+  "info": {
+    "_postman_id": "sei-v2-collection-2025",
+    "name": "SEI v2 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Aluno",
+      "item": [
+        {
+          "name": "Criar Aluno",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"João Silva\",\n  \"email\": \"joao@email.com\",\n  \"matricula\": \"20250001\",\n  \"dataNascimento\": \"2000-01-01\",\n  \"ativo\": true\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/aluno", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno"] }
+          }
+        },
+        {
+          "name": "Listar Alunos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/aluno", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno"] }
+          }
+        },
+        {
+          "name": "Buscar Aluno por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/aluno/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno", "00"] }
+          }
+        },
+        {
+          "name": "Buscar Aluno por Nome",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/aluno/nome/João", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno", "nome", "João"] }
+          }
+        },
+        {
+          "name": "Atualizar Aluno",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"João Silva Atualizado\",\n  \"email\": \"joao@email.com\",\n  \"matricula\": \"20250001\",\n  \"dataNascimento\": \"2000-01-01\",\n  \"ativo\": false\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/aluno/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno", "00"] }
+          }
+        },
+        {
+          "name": "Deletar Aluno",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:3000/api/aluno/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno", "00"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Disciplina",
+      "item": [
+        {
+          "name": "Criar Disciplina",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Matemática\",\n  \"carga_horaria\": 60,\n  \"ativo\": true\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/disciplina", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina"] }
+          }
+        },
+        {
+          "name": "Listar Disciplinas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/disciplina", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina"] }
+          }
+        },
+        {
+          "name": "Buscar Disciplina por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/disciplina/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina", "00"] }
+          }
+        },
+        {
+          "name": "Buscar Disciplina por Nome",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/disciplina/nome/Matemática", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina", "nome", "Matemática"] }
+          }
+        },
+        {
+          "name": "Atualizar Disciplina",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Matemática Atualizada\",\n  \"carga_horaria\": 80,\n  \"ativo\": false\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/disciplina/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina", "00"] }
+          }
+        },
+        {
+          "name": "Deletar Disciplina",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:3000/api/disciplina/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina", "00"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Professor",
+      "item": [
+        {
+          "name": "Criar Professor",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Maria Souza\",\n  \"matricula\": \"12345\",\n  \"ativo\": true\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/professor", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor"] }
+          }
+        },
+        {
+          "name": "Listar Professores",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/professor", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor"] }
+          }
+        },
+        {
+          "name": "Buscar Professor por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/professor/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor", "00"] }
+          }
+        },
+        {
+          "name": "Buscar Professor por Matrícula",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/professor/matricula/12345", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor", "matricula", "12345"] }
+          }
+        },
+        {
+          "name": "Atualizar Professor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Maria Souza Atualizada\",\n  \"matricula\": \"12345\",\n  \"ativo\": false\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/professor/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor", "00"] }
+          }
+        },
+        {
+          "name": "Deletar Professor",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:3000/api/professor/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor", "00"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sala",
+      "item": [
+        {
+          "name": "Criar Sala",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numero\": 101,\n  \"capacidade\": 30,\n  \"ativo\": true\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/salas", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas"] }
+          }
+        },
+        {
+          "name": "Listar Salas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/salas", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas"] }
+          }
+        },
+        {
+          "name": "Buscar Sala por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/salas/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas", "00"] }
+          }
+        },
+        {
+          "name": "Buscar Sala por Capacidade Mínima",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/salas/capacidade/20", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas", "capacidade", "20"] }
+          }
+        },
+        {
+          "name": "Atualizar Sala",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numero\": 101,\n  \"capacidade\": 25,\n  \"ativo\": false\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/salas/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas", "00"] }
+          }
+        },
+        {
+          "name": "Deletar Sala",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:3000/api/salas/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas", "00"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "TurmaAluno",
+      "item": [
+        {
+          "name": "Criar TurmaAluno",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"turma\": 00,\n  \"aluno\": 00,\n  \"ativo\": true\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/turmaAluno", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmaAluno"] }
+          }
+        },
+        {
+          "name": "Listar TurmaAluno",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmaAluno", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmaAluno"] }
+          }
+        },
+        {
+          "name": "Buscar TurmaAluno por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmaAluno/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmaAluno", "00"] }
+          }
+        },
+        {
+          "name": "Atualizar TurmaAluno",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"turma\": 00,\n  \"aluno\": 00,\n  \"ativo\": false\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/turmaAluno/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmaAluno", "00"] }
+          }
+        },
+        {
+          "name": "Deletar TurmaAluno",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:3000/api/turmaAluno/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmaAluno", "00"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Turma",
+      "item": [
+        {
+          "name": "Criar Turma",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigoTurma\": \"TURMA01\",\n  \"disciplina_id\": 00,\n  \"professor_id\": 00,\n  \"sala_id\": 00,\n  \"horario\": 1,\n  \"ativo\": true\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/turmas", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas"] }
+          }
+        },
+        {
+          "name": "Listar Turmas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmas", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas"] }
+          }
+        },
+        {
+          "name": "Buscar Turmas com Relações",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmas/relations", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas", "relations"] }
+          }
+        },
+        {
+          "name": "Buscar Turma por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmas/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas", "00"] }
+          }
+        },
+        {
+          "name": "Atualizar Turma",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"codigoTurma\": \"TURMA01\",\n  \"disciplina_id\": 00,\n  \"professor_id\": 00,\n  \"sala_id\": 00,\n  \"horario\": 2,\n  \"ativo\": false\n}"
+            },
+            "url": { "raw": "http://localhost:3000/api/turmas/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas", "00"] }
+          }
+        },
+        {
+          "name": "Deletar Turma",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:3000/api/turmas/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas", "00"] }
+          }
+        }
+      ]
+    }
+  ]
+}

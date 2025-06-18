@@ -5,6 +5,8 @@ import {professorRouter} from './routes/professorRoutes';
 import {salaRouter} from './routes/salaRoutes';
 import {turmaRouter} from './routes/turmaRoutes';
 import { initializeDatabase } from './database/connection';
+import { turmaAlunoRouter } from './routes/turmaAlunoRoutes';
+import { alunoRouter } from './routes/alunoRoutes';
 
 const app = express();
 
@@ -15,6 +17,8 @@ app.use('/api', disciplinaRouter);
 app.use('/api', professorRouter);
 app.use('/api', salaRouter);
 app.use('/api', turmaRouter);
+app.use('/api', turmaAlunoRouter);
+app.use('/api', alunoRouter)
 
 
 

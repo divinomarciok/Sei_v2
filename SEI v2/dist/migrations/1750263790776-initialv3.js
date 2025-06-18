@@ -9,28 +9,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SalaRepository = void 0;
-const BaseRepository_1 = require("./base/BaseRepository");
-const Sala_1 = require("../models/Sala");
-const connection_1 = require("../database/connection");
-class SalaRepository extends BaseRepository_1.BaseRepository {
+exports.Initialv31750263790776 = void 0;
+class Initialv31750263790776 {
     constructor() {
-        super(connection_1.AppDataSource.getRepository(Sala_1.Sala));
+        this.name = 'Initialv31750263790776';
     }
-    findByCapacidadeMinima(capacidade) {
+    up(queryRunner) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield this.repository.find({
-                where: {
-                    capacidade: capacidade >= 0 ?
-                        { gte: capacidade } :
-                        undefined,
-                    ativo: true
-                },
-                order: {
-                    capacidade: "ASC"
-                }
-            });
+            yield queryRunner.query(`ALTER TABLE "Aluno" ADD "ativo" boolean NOT NULL`);
+            yield queryRunner.query(`ALTER TABLE "TurmaAluno" ADD "ativo" boolean NOT NULL`);
+        });
+    }
+    down(queryRunner) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield queryRunner.query(`ALTER TABLE "TurmaAluno" DROP COLUMN "ativo"`);
+            yield queryRunner.query(`ALTER TABLE "Aluno" DROP COLUMN "ativo"`);
         });
     }
 }
-exports.SalaRepository = SalaRepository;
+exports.Initialv31750263790776 = Initialv31750263790776;

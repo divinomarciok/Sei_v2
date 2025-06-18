@@ -12,6 +12,8 @@ const salaRoutes_1 = require("./routes/salaRoutes");
 const turmaRoutes_1 = require("./routes/turmaRoutes");
 const connection_1 = require("./database/connection");
 Object.defineProperty(exports, "initializeDatabase", { enumerable: true, get: function () { return connection_1.initializeDatabase; } });
+const turmaAlunoRoutes_1 = require("./routes/turmaAlunoRoutes");
+const alunoRoutes_1 = require("./routes/alunoRoutes");
 const app = (0, express_1.default)();
 exports.app = app;
 app.use((0, cors_1.default)());
@@ -20,6 +22,8 @@ app.use('/api', disciplinaRoutes_1.disciplinaRouter);
 app.use('/api', professorRoutes_1.professorRouter);
 app.use('/api', salaRoutes_1.salaRouter);
 app.use('/api', turmaRoutes_1.turmaRouter);
+app.use('/api', turmaAlunoRoutes_1.turmaAlunoRouter);
+app.use('/api', alunoRoutes_1.alunoRouter);
 app.get('/', (req, res) => {
     res.send('SEI v2 API is running');
 });
