@@ -40,5 +40,15 @@ class TurmaAlunoService {
             return yield this.repository.list();
         });
     }
+    findAtivos() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield this.repository.findAtivos();
+        });
+    }
+    findInativos() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield this.repository.findInativos();
+        });
+    }
 }
 exports.TurmaAlunoService = TurmaAlunoService;

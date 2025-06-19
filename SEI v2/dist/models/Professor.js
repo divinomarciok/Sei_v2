@@ -32,6 +32,10 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Professor.prototype, "ativo", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ length: 14 }),
+    __metadata("design:type", String)
+], Professor.prototype, "cpf", void 0);
+__decorate([
     (0, typeorm_1.OneToMany)(() => Turma_1.Turma, turma => turma.professor),
     __metadata("design:type", Array)
 ], Professor.prototype, "turmas", void 0);

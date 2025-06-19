@@ -31,4 +31,12 @@ export class DisciplinaService {
     async findByNome(nome: string): Promise<Disciplina[]> {
         return await this.repository.findByNome(nome);
     }
+
+    async findAtivos(): Promise<Disciplina[]> {
+        return await this.repository.findAtivos();
+    }
+
+    async findInativos(): Promise<Disciplina[]> {
+        return await this.repository.findInativos();
+    }
 }

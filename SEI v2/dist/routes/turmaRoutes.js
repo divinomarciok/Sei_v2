@@ -12,3 +12,5 @@ router.get('/turmas/relations', (req, res) => controller.findAllWithRelations(re
 router.get('/turmas/:id', (req, res) => controller.findById(req, res));
 router.put('/turmas/:id', (req, res) => controller.update(req, res));
 router.delete('/turmas/:id', (req, res) => controller.delete(req, res));
+router.get('/turmas/ativos', (req, res) => controller.findAtivos(req, res));
+router.get('/turmas/inativos', (req, res) => controller.findInativos(req, res));

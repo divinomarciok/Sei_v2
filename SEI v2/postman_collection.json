@@ -17,7 +17,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"nome\": \"João Silva\",\n  \"email\": \"joao@email.com\",\n  \"matricula\": \"20250001\",\n  \"dataNascimento\": \"2000-01-01\",\n  \"ativo\": true\n}"
+              "raw": "{\n  \"nome\": \"João Silva\",\n  \"cpf\": \"123.456.789-00\",\n  \"email\": \"joao@email.com\",\n  \"matricula\": \"20250001\",\n  \"dataNascimento\": \"2000-01-01\",\n  \"ativo\": true\n}"
             },
             "url": { "raw": "http://localhost:3000/api/aluno", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno"] }
           }
@@ -44,6 +44,20 @@
           }
         },
         {
+          "name": "Buscar Alunos Ativos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/aluno/ativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno", "ativos"] }
+          }
+        },
+        {
+          "name": "Buscar Alunos Inativos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/aluno/inativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno", "inativos"] }
+          }
+        },
+        {
           "name": "Atualizar Aluno",
           "request": {
             "method": "PUT",
@@ -52,7 +66,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"nome\": \"João Silva Atualizado\",\n  \"email\": \"joao@email.com\",\n  \"matricula\": \"20250001\",\n  \"dataNascimento\": \"2000-01-01\",\n  \"ativo\": false\n}"
+              "raw": "{\n  \"nome\": \"João Silva Atualizado\",\n  \"cpf\": \"123.456.789-00\",\n  \"email\": \"joao@email.com\",\n  \"matricula\": \"20250001\",\n  \"dataNascimento\": \"2000-01-01\",\n  \"ativo\": false\n}"
             },
             "url": { "raw": "http://localhost:3000/api/aluno/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "aluno", "00"] }
           }
@@ -105,6 +119,20 @@
           }
         },
         {
+          "name": "Buscar Disciplinas Ativas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/disciplina/ativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina", "ativos"] }
+          }
+        },
+        {
+          "name": "Buscar Disciplinas Inativas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/disciplina/inativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "disciplina", "inativos"] }
+          }
+        },
+        {
           "name": "Atualizar Disciplina",
           "request": {
             "method": "PUT",
@@ -139,7 +167,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"nome\": \"Maria Souza\",\n  \"matricula\": \"12345\",\n  \"ativo\": true\n}"
+              "raw": "{\n  \"nome\": \"Maria Souza\",\n  \"cpf\": \"987.654.321-00\",\n  \"matricula\": \"12345\",\n  \"ativo\": true\n}"
             },
             "url": { "raw": "http://localhost:3000/api/professor", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor"] }
           }
@@ -166,6 +194,20 @@
           }
         },
         {
+          "name": "Buscar Professores Ativos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/professor/ativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor", "ativos"] }
+          }
+        },
+        {
+          "name": "Buscar Professores Inativos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/professor/inativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor", "inativos"] }
+          }
+        },
+        {
           "name": "Atualizar Professor",
           "request": {
             "method": "PUT",
@@ -174,7 +216,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"nome\": \"Maria Souza Atualizada\",\n  \"matricula\": \"12345\",\n  \"ativo\": false\n}"
+              "raw": "{\n  \"nome\": \"Maria Souza Atualizada\",\n  \"cpf\": \"987.654.321-00\",\n  \"matricula\": \"12345\",\n  \"ativo\": false\n}"
             },
             "url": { "raw": "http://localhost:3000/api/professor/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "professor", "00"] }
           }
@@ -224,6 +266,20 @@
           "request": {
             "method": "GET",
             "url": { "raw": "http://localhost:3000/api/salas/capacidade/20", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas", "capacidade", "20"] }
+          }
+        },
+        {
+          "name": "Buscar Salas Ativas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/salas/ativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas", "ativos"] }
+          }
+        },
+        {
+          "name": "Buscar Salas Inativas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/salas/inativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "salas", "inativos"] }
           }
         },
         {
@@ -281,6 +337,20 @@
           }
         },
         {
+          "name": "Buscar TurmaAluno Ativos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmaAluno/ativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmaAluno", "ativos"] }
+          }
+        },
+        {
+          "name": "Buscar TurmaAluno Inativos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmaAluno/inativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmaAluno", "inativos"] }
+          }
+        },
+        {
           "name": "Atualizar TurmaAluno",
           "request": {
             "method": "PUT",
@@ -315,7 +385,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"codigoTurma\": \"TURMA01\",\n  \"disciplina_id\": 00,\n  \"professor_id\": 00,\n  \"sala_id\": 00,\n  \"horario\": 1,\n  \"ativo\": true\n}"
+              "raw": "{\n  \"codigoTurma\": \"TURMA01\",\n  \"disciplina_id\": 00,\n  \"professor_id\": 00,\n  \"sala_id\": 00,\n  \"horario\": 1,\n  \"hora_inicio\": \"08:00\",\n  \"hora_fim\": \"10:00\",\n  \"ativo\": true\n}"
             },
             "url": { "raw": "http://localhost:3000/api/turmas", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas"] }
           }
@@ -342,6 +412,20 @@
           }
         },
         {
+          "name": "Buscar Turmas Ativas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmas/ativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas", "ativos"] }
+          }
+        },
+        {
+          "name": "Buscar Turmas Inativas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:3000/api/turmas/inativos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas", "inativos"] }
+          }
+        },
+        {
           "name": "Atualizar Turma",
           "request": {
             "method": "PUT",
@@ -350,7 +434,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"codigoTurma\": \"TURMA01\",\n  \"disciplina_id\": 00,\n  \"professor_id\": 00,\n  \"sala_id\": 00,\n  \"horario\": 2,\n  \"ativo\": false\n}"
+              "raw": "{\n  \"codigoTurma\": \"TURMA01\",\n  \"disciplina_id\": 00,\n  \"professor_id\": 00,\n  \"sala_id\": 00,\n  \"horario\": 2,\n  \"hora_inicio\": \"10:00\",\n  \"hora_fim\": \"12:00\",\n  \"ativo\": false\n}"
             },
             "url": { "raw": "http://localhost:3000/api/turmas/00", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["api", "turmas", "00"] }
           }

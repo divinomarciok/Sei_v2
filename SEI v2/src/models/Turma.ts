@@ -37,4 +37,10 @@ export class Turma {
 
     @Column({ default: true })
     ativo!: boolean;
+
+    @Column({ length: 10 })
+    hora_inicio!: string;
+
+    @Column({ length: 10 })
+    hora_fim!: string;
 }

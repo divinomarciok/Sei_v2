@@ -19,4 +19,7 @@ export class Aluno {
 
   @Column()
   ativo!: boolean; // Campo ativo ajustado para boolean
+
+  @Column({ length: 14 })
+  cpf?: string; // Campo CPF obrigatório
 }

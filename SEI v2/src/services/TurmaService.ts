@@ -31,4 +31,12 @@ export class TurmaService {
     async findAllWithRelations(): Promise<Turma[]> {
         return await this.repository.findAllWithRelations();
     }
+
+    async findAtivos(): Promise<Turma[]> {
+        return await this.repository.findAtivos();
+    }
+
+    async findInativos(): Promise<Turma[]> {
+        return await this.repository.findInativos();
+    }
 }

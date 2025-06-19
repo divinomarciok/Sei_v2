@@ -45,5 +45,15 @@ class TurmaService {
             return yield this.repository.findAllWithRelations();
         });
     }
+    findAtivos() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield this.repository.findAtivos();
+        });
+    }
+    findInativos() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield this.repository.findInativos();
+        });
+    }
 }
 exports.TurmaService = TurmaService;

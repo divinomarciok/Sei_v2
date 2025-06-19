@@ -82,4 +82,22 @@ export class TurmaController {
             res.status(500).json({ message: 'Erro ao listar turmas com relacionamentos', error });
         }
     }
+
+    async findAtivos(req: Request, res: Response): Promise<void> {
+        try {
+            const turmas = await this.service.findAtivos();
+            res.json(turmas);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar turmas ativas', error });
+        }
+    }
+
+    async findInativos(req: Request, res: Response): Promise<void> {
+        try {
+            const turmas = await this.service.findInativos();
+            res.json(turmas);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar turmas inativas', error });
+        }
+    }
 }

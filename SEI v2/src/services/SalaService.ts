@@ -31,4 +31,12 @@ export class SalaService {
     async findByCapacidadeMinima(capacidade: number): Promise<Sala[]> {
         return await this.repository.findByCapacidadeMinima(capacidade);
     }
+
+    async findAtivos(): Promise<Sala[]> {
+        return await this.repository.findAtivos();
+    }
+
+    async findInativos(): Promise<Sala[]> {
+        return await this.repository.findInativos();
+    }
 }

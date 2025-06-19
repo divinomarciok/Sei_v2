@@ -38,6 +38,10 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Boolean)
 ], Aluno.prototype, "ativo", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ length: 14 }),
+    __metadata("design:type", String)
+], Aluno.prototype, "cpf", void 0);
 exports.Aluno = Aluno = __decorate([
     (0, typeorm_1.Entity)('Aluno')
 ], Aluno);

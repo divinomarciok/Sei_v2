@@ -15,6 +15,9 @@ export class Professor {
     @Column({ default: true })
     ativo!: boolean;
 
+    @Column({ length: 14 })
+    cpf?: string; // Campo CPF obrigatório
+
     @OneToMany(() => Turma, turma => turma.professor)
     turmas!: Turma[];
 }

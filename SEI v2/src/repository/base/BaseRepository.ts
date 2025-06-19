@@ -64,4 +64,18 @@ export abstract class BaseRepository<T extends ObjectLiteral> implements CRUDRep
     async list(): Promise<T[]> {
         return this.repository.find();
     }
+
+    /**
+     * Busca todas as entidades ativas
+     */
+    async findAtivos(): Promise<T[]> {
+        return this.repository.find({ where: { ativo: true } as any });
+    }
+
+    /**
+     * Busca todas as entidades inativas
+     */
+    async findInativos(): Promise<T[]> {
+        return this.repository.find({ where: { ativo: false } as any });
+    }
 }

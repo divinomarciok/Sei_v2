@@ -102,5 +102,27 @@ class ProfessorController {
             }
         });
     }
+    findAtivos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const professores = yield this.service.findAtivos();
+                res.json(professores);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar professores ativos', error });
+            }
+        });
+    }
+    findInativos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const professores = yield this.service.findInativos();
+                res.json(professores);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar professores inativos', error });
+            }
+        });
+    }
 }
 exports.ProfessorController = ProfessorController;

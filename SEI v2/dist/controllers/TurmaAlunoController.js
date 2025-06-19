@@ -85,5 +85,27 @@ class TurmaAlunoController {
             }
         });
     }
+    findAtivos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const turmaAlunos = yield this.service.findAtivos();
+                res.json(turmaAlunos);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar turma-aluno ativos', error });
+            }
+        });
+    }
+    findInativos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const turmaAlunos = yield this.service.findInativos();
+                res.json(turmaAlunos);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar turma-aluno inativos', error });
+            }
+        });
+    }
 }
 exports.TurmaAlunoController = TurmaAlunoController;

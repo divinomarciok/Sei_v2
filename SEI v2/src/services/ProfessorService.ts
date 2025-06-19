@@ -31,4 +31,12 @@ export class ProfessorService {
     async findByMatricula(matricula: string): Promise<Professor | null> {
         return await this.repository.findByMatricula(matricula);
     }
+
+    async findAtivos(): Promise<Professor[]> {
+        return await this.repository.findAtivos();
+    }
+
+    async findInativos(): Promise<Professor[]> {
+        return await this.repository.findInativos();
+    }
 }

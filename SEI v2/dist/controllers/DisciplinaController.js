@@ -97,5 +97,27 @@ class DisciplinaController {
             }
         });
     }
+    findAtivos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const disciplinas = yield this.service.findAtivos();
+                res.json(disciplinas);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar disciplinas ativas', error });
+            }
+        });
+    }
+    findInativos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const disciplinas = yield this.service.findInativos();
+                res.json(disciplinas);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar disciplinas inativas', error });
+            }
+        });
+    }
 }
 exports.DisciplinaController = DisciplinaController;

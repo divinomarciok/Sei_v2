@@ -31,4 +31,12 @@ export class AlunoService {
     async findByNome(nome: string): Promise<Aluno[]> {
         return await this.repository.findByNome(nome);
     }
+
+    async findAtivos(): Promise<Aluno[]> {
+        return await this.repository.findAtivos();
+    }
+
+    async findInativos(): Promise<Aluno[]> {
+        return await this.repository.findInativos();
+    }
 }

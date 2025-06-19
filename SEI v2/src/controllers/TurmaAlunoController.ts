@@ -73,4 +73,22 @@ export class TurmaAlunoController {
             res.status(500).json({ message: 'Erro ao listar turma-alunos', error });
         }
     }
+
+    async findAtivos(req: Request, res: Response): Promise<void> {
+        try {
+            const turmaAlunos = await this.service.findAtivos();
+            res.json(turmaAlunos);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar turma-aluno ativos', error });
+        }
+    }
+
+    async findInativos(req: Request, res: Response): Promise<void> {
+        try {
+            const turmaAlunos = await this.service.findInativos();
+            res.json(turmaAlunos);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar turma-aluno inativos', error });
+        }
+    }
 }

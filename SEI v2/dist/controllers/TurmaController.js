@@ -96,5 +96,27 @@ class TurmaController {
             }
         });
     }
+    findAtivos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const turmas = yield this.service.findAtivos();
+                res.json(turmas);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar turmas ativas', error });
+            }
+        });
+    }
+    findInativos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const turmas = yield this.service.findInativos();
+                res.json(turmas);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar turmas inativas', error });
+            }
+        });
+    }
 }
 exports.TurmaController = TurmaController;

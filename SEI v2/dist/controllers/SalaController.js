@@ -97,5 +97,27 @@ class SalaController {
             }
         });
     }
+    findAtivos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const salas = yield this.service.findAtivos();
+                res.json(salas);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar salas ativas', error });
+            }
+        });
+    }
+    findInativos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const salas = yield this.service.findInativos();
+                res.json(salas);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar salas inativas', error });
+            }
+        });
+    }
 }
 exports.SalaController = SalaController;

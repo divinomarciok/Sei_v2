@@ -60,6 +60,14 @@ __decorate([
     (0, typeorm_1.Column)({ default: true }),
     __metadata("design:type", Boolean)
 ], Turma.prototype, "ativo", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ length: 10 }),
+    __metadata("design:type", String)
+], Turma.prototype, "hora_inicio", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ length: 10 }),
+    __metadata("design:type", String)
+], Turma.prototype, "hora_fim", void 0);
 exports.Turma = Turma = __decorate([
     (0, typeorm_1.Entity)("turmas")
 ], Turma);

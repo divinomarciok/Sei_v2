@@ -97,5 +97,27 @@ class AlunoController {
             }
         });
     }
+    findAtivos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const alunos = yield this.service.findAtivos();
+                res.json(alunos);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar alunos ativos', error });
+            }
+        });
+    }
+    findInativos(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const alunos = yield this.service.findInativos();
+                res.json(alunos);
+            }
+            catch (error) {
+                res.status(500).json({ message: 'Erro ao buscar alunos inativos', error });
+            }
+        });
+    }
 }
 exports.AlunoController = AlunoController;

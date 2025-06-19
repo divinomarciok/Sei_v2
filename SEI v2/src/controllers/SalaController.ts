@@ -83,4 +83,22 @@ export class SalaController {
             res.status(500).json({ message: 'Erro ao buscar salas por capacidade', error });
         }
     }
+
+    async findAtivos(req: Request, res: Response): Promise<void> {
+        try {
+            const salas = await this.service.findAtivos();
+            res.json(salas);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar salas ativas', error });
+        }
+    }
+
+    async findInativos(req: Request, res: Response): Promise<void> {
+        try {
+            const salas = await this.service.findInativos();
+            res.json(salas);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar salas inativas', error });
+        }
+    }
 }

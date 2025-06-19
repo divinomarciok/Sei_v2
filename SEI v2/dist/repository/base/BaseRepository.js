@@ -75,5 +75,21 @@ class BaseRepository {
             return this.repository.find();
         });
     }
+    /**
+     * Busca todas as entidades ativas
+     */
+    findAtivos() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.repository.find({ where: { ativo: true } });
+        });
+    }
+    /**
+     * Busca todas as entidades inativas
+     */
+    findInativos() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.repository.find({ where: { ativo: false } });
+        });
+    }
 }
 exports.BaseRepository = BaseRepository;

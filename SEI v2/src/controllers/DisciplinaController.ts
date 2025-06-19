@@ -83,4 +83,22 @@ export class DisciplinaController {
             res.status(500).json({ message: 'Erro ao buscar disciplinas por nome', error });
         }
     }
+
+    async findAtivos(req: Request, res: Response): Promise<void> {
+        try {
+            const disciplinas = await this.service.findAtivos();
+            res.json(disciplinas);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar disciplinas ativas', error });
+        }
+    }
+
+    async findInativos(req: Request, res: Response): Promise<void> {
+        try {
+            const disciplinas = await this.service.findInativos();
+            res.json(disciplinas);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar disciplinas inativas', error });
+        }
+    }
 }

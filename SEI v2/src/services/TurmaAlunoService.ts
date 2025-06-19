@@ -27,4 +27,12 @@ export class TurmaAlunoService {
     async list(): Promise<TurmaAluno[]> {
         return await this.repository.list();
     }
+
+    async findAtivos(): Promise<TurmaAluno[]> {
+        return await this.repository.findAtivos();
+    }
+
+    async findInativos(): Promise<TurmaAluno[]> {
+        return await this.repository.findInativos();
+    }
 }

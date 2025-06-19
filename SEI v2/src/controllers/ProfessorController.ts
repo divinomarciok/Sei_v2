@@ -90,4 +90,22 @@ export class ProfessorController {
             res.status(500).json({ message: 'Erro ao buscar professor por matrícula', error });
         }
     }
+
+    async findAtivos(req: Request, res: Response): Promise<void> {
+        try {
+            const professores = await this.service.findAtivos();
+            res.json(professores);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar professores ativos', error });
+        }
+    }
+
+    async findInativos(req: Request, res: Response): Promise<void> {
+        try {
+            const professores = await this.service.findInativos();
+            res.json(professores);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar professores inativos', error });
+        }
+    }
 }

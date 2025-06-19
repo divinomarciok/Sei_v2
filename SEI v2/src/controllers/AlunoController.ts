@@ -83,4 +83,22 @@ export class AlunoController {
             res.status(500).json({ message: 'Erro ao buscar alunos por nome', error });
         }
     }
+
+    async findAtivos(req: Request, res: Response): Promise<void> {
+        try {
+            const alunos = await this.service.findAtivos();
+            res.json(alunos);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar alunos ativos', error });
+        }
+    }
+
+    async findInativos(req: Request, res: Response): Promise<void> {
+        try {
+            const alunos = await this.service.findInativos();
+            res.json(alunos);
+        } catch (error) {
+            res.status(500).json({ message: 'Erro ao buscar alunos inativos', error });
+        }
+    }
 }
